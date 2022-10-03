@@ -1,9 +1,10 @@
 from cProfile import label;
-import tkinter ;
+import tkinter ; #LIBRERIA PARA LA INTERFAZ GRAFICA
 from tkinter import*;
 from tkinter import messagebox;
 from tkinter import font;
-import pymysql;
+import pymysql; #LIBRERIA PARA MANEJAR BASE DE DATOS
+#DEFINIMOS LA PANTALLA PRINCIPAL DEL PROGRAMA
 def menu_pantalla():
     global pantalla;
     pantalla=Tk();
@@ -21,7 +22,7 @@ def menu_pantalla():
     Button(text="Registrarse", height="3", width="30", command=registrar).pack();
     pantalla.mainloop();
 
-
+#DEFINIMOS LA PANTALLA DE INICIO
 def inicio_sesion():
     global pantalla1;
     pantalla1 = Toplevel(pantalla);
@@ -50,7 +51,7 @@ def inicio_sesion():
     Label(pantalla1).pack();
 
     Button(pantalla1, text="Iniciar sesion").pack();
-
+#DEFINIMOS LA PANTALLA DE REGISTRO
 def registrar():
     global pantalla2;
     pantalla2 = Toplevel (pantalla);
@@ -71,7 +72,7 @@ def registrar():
     Label(pantalla2, text="Contraseña").pack()
     contrasenausuario_entry = Entry(pantalla2).pack();
     Button(pantalla2, text="Registrarse", command=inserta_datos).pack();
-
+#DEFINIMOS LA FUNCION PARA QUE AL MOMENTO DE DAR CLICK EN EL BOTON DE REGISTRARSE SUBA LOS DATOS DEL USUARIO Y CONTRASEÑA
 def inserta_datos():
 
 
